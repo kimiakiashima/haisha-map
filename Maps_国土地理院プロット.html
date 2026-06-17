@@ -79,7 +79,7 @@ html, body {
 <div id="map"></div>
 
 <div class="info" id="infoBox">
-全車表示 / 表示件数: 34 件
+全車表示 / 表示件数: 58 件
 </div>
 
 <div class="selector">
@@ -92,7 +92,9 @@ html, body {
 <button class="truck-btn" data-truck="6"><span class="legend-dot" style="background:darkred;"></span>6号車</button>
 <button class="truck-btn" data-truck="7"><span class="legend-dot" style="background:cadetblue;"></span>7号車</button>
 <button class="truck-btn" data-truck="9"><span class="legend-dot" style="background:darkblue;"></span>9号車</button>
-<button class="truck-btn" data-truck="11"><span class="legend-dot" style="background:pink;"></span>11号車</button>
+<button class="truck-btn" data-truck="12"><span class="legend-dot" style="background:gray;"></span>12号車</button>
+<button class="truck-btn" data-truck="13"><span class="legend-dot" style="background:black;"></span>13号車</button>
+<button class="truck-btn" data-truck="14"><span class="legend-dot" style="background:lightblue;"></span>14号車</button>
 <button class="truck-btn" data-truck="36"><span class="legend-dot" style="background:darkred;"></span>36号車</button>
 <button class="truck-btn" data-truck="90"><span class="legend-dot" style="background:lightgreen;"></span>90号車</button>
 </div>
@@ -100,7 +102,7 @@ html, body {
 <script>
 
 var map = L.map('map').setView(
-    [35.80335579411764, 139.70117320588236],
+    [35.791459, 139.67711636206897],
     12
 );
 
@@ -114,7 +116,7 @@ L.tileLayer(
 ).addTo(map);
 
 
-        var marker = L.circleMarker([35.711391, 139.833588], {
+        var marker = L.circleMarker([35.740726, 139.67984], {
             radius: 8,
             color: "blue",
             fillColor: "blue",
@@ -122,7 +124,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 1<br><b>届先CD</b>: 0336168491<br><b>届先名</b>: 株式会社　岩井美術印刷<br><b>住所</b>: 墨田区立花　６－３－１３<br><b>枚数</b>: 001<br><b>重量</b>: 1262<br><b>メモ</b>: 0336168491  フォーク有り 8：30～  3トン車まで 校正紙は２Ｆへ<br><b>緯度</b>: 35.711391<br><b>経度</b>: 139.833588<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 14<br><b>届先CD</b>: 0339744011<br><b>届先名</b>: 株式会社　平河工業社　小竹事業所<br><b>住所</b>: 板橋区向原　２－２２－２１<br><b>枚数</b>: 001<br><b>重量</b>: 51<br><b>メモ</b>: 0339744011  フォーク有り 8：30～   maps位置は、ほぼ正解<br><b>緯度</b>: 35.740726<br><b>経度</b>: 139.67984<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`2号車`, {
             direction: "top",
@@ -131,190 +133,6 @@ L.tileLayer(
         });
 
         marker.truckNo = "2";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.699501, 139.802628], {
-            radius: 8,
-            color: "blue",
-            fillColor: "blue",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 1<br><b>届先CD</b>: 0338295383<br><b>届先名</b>: 有限会社　丸上印刷<br><b>住所</b>: 墨田区石原　３－９－２<br><b>枚数</b>: 003<br><b>重量</b>: 165<br><b>メモ</b>: 0338295383  　F有KPP運●積極的　 8：00～   警察の指導があり倉庫前でしか降ろせなくなった。四六の半切は印刷出来ない。<br><b>緯度</b>: 35.699501<br><b>経度</b>: 139.802628<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`2号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "2";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.78455, 139.748474], {
-            radius: 8,
-            color: "blue",
-            fillColor: "blue",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 5<br><b>届先CD</b>: 0338537724<br><b>届先名</b>: 和田紙工<br><b>住所</b>: 足立区鹿浜　５－７－２<br><b>枚数</b>: 001<br><b>重量</b>: 82<br><b>メモ</b>: 0338537724  　F有KPP先方　  左積み  逆駐可<br><b>緯度</b>: 35.78455<br><b>経度</b>: 139.748474<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`2号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "2";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.796009, 139.756882], {
-            radius: 8,
-            color: "blue",
-            fillColor: "blue",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482241231<br><b>届先名</b>: 光和美術印刷　株式会社<br><b>住所</b>: 埼玉県川口市弥平　４－１１－２３<br><b>枚数</b>: 001<br><b>重量</b>: 42<br><b>メモ</b>: 0482241231  　F有KPP先方　    受付方法変更！ﾌｫｰｸﾏﾝに伝票を渡して検品をしてもらいﾌｫｰｸﾏﾝに印をもらう。朝一は製本屋がいる<br><b>緯度</b>: 35.796009<br><b>経度</b>: 139.756882<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`2号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "2";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.84227, 139.725037], {
-            radius: 8,
-            color: "blue",
-            fillColor: "blue",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482849191<br><b>届先名</b>: 株式会社　サンアロー<br><b>住所</b>: 埼玉県川口市里　１１９１－２４５<br><b>枚数</b>: 002<br><b>重量</b>: 22<br><b>メモ</b>: 0482849191   8：00～   サブマップ修正済み　手前の駐車場でUターン可能　多ければ手伝ってくれる。３ｔ車なら前までいける。<br><b>緯度</b>: 35.84227<br><b>経度</b>: 139.725037<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`2号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "2";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.760303, 139.731888], {
-            radius: 8,
-            color: "green",
-            fillColor: "green",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 8<br><b>届先CD</b>: 0339144681<br><b>届先名</b>: タカックス　株式会社<br><b>住所</b>: 北区東十条　１－６－１５<br><b>枚数</b>: 003<br><b>重量</b>: 180<br><b>メモ</b>: 0339144681<br><b>緯度</b>: 35.760303<br><b>経度</b>: 139.731888<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`3号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "3";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.744926, 139.709244], {
-            radius: 8,
-            color: "green",
-            fillColor: "green",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 14<br><b>届先CD</b>: 0335548511<br><b>届先名</b>: （株）ＮＰＣ　東京工場<br><b>住所</b>: 板橋区大山金井町　５－８<br><b>枚数</b>: 001<br><b>重量</b>: 35<br><b>メモ</b>: 0335548511  　F有KPP運×拒否　 8：00～  3トン車まで ゲタパレ不可。<br><b>緯度</b>: 35.744926<br><b>経度</b>: 139.709244<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`3号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "3";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.773849, 139.696548], {
-            radius: 8,
-            color: "green",
-            fillColor: "green",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0339685381<br><b>届先名</b>: ＴＯＰＰＡＮ（株）板橋工場ＴＡＣＴ<br><b>住所</b>: 板橋区志村　１－１１－１<br><b>枚数</b>: 001<br><b>重量</b>: 17<br><b>メモ</b>: 0339685381  　F有KPP先方　    事務所は無くなりました。　昼は11：30～12：30<br><b>緯度</b>: 35.773849<br><b>経度</b>: 139.696548<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`3号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "3";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.794235, 139.684845], {
-            radius: 8,
-            color: "green",
-            fillColor: "green",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0359161591<br><b>届先名</b>: 東京リスマチック　舟渡工場<br><b>住所</b>: 板橋区舟渡３－１４－２１<br><b>枚数</b>: 001<br><b>重量</b>: 21<br><b>メモ</b>: 0359161591  　F有KPP先方　 8：00～   入口のスロープが2段になっている。最徐行で入場、荷崩れ注意！<br><b>緯度</b>: 35.794235<br><b>経度</b>: 139.684845<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`3号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "3";
 
         allMarkers.push(marker);
 
@@ -323,44 +141,44 @@ L.tileLayer(
 
         var marker = L.circleMarker([35.718422, 139.743347], {
             radius: 8,
-            color: "green",
-            fillColor: "green",
+            color: "blue",
+            fillColor: "blue",
             fillOpacity: 0.85,
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 22<br><b>届先CD</b>: 0338112219<br><b>届先名</b>: 竹原断裁所<br><b>住所</b>: 文京区白山　３－２－３<br><b>枚数</b>: 001<br><b>重量</b>: 165<br><b>メモ</b>: 0338112219 重点21 　F有KPP運●消極的 8：30～   表に伝票ボードがあるので伝票をはさみ自分で降ろす。<br><b>緯度</b>: 35.718422<br><b>経度</b>: 139.743347<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 22<br><b>届先CD</b>: 0338112219<br><b>届先名</b>: 竹原断裁所<br><b>住所</b>: 文京区白山　３－２－３<br><b>枚数</b>: 001<br><b>重量</b>: 22<br><b>メモ</b>: 0338112219 重点21 　F有KPP運●消極的 8：30～   表に伝票ボードがあるので伝票をはさみ自分で降ろす。<br><b>緯度</b>: 35.718422<br><b>経度</b>: 139.743347<br><b>変換結果</b>: CACHE`);
 
-        marker.bindTooltip(`3号車`, {
+        marker.bindTooltip(`2号車`, {
             direction: "top",
             sticky: true,
             opacity: 0.95
         });
 
-        marker.truckNo = "3";
+        marker.truckNo = "2";
 
         allMarkers.push(marker);
 
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.721516, 139.739029], {
+        var marker = L.circleMarker([35.723415, 139.729797], {
             radius: 8,
-            color: "green",
-            fillColor: "green",
+            color: "blue",
+            fillColor: "blue",
             fillOpacity: 0.85,
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 22<br><b>届先CD</b>: 0339440578<br><b>届先名</b>: 中町印刷　第２工場<br><b>住所</b>: 文京区大塚　３－３７－１<br><b>枚数</b>: 002<br><b>重量</b>: 206<br><b>メモ</b>: 0339440578  　F有KPP先方　 8：30～<br><b>緯度</b>: 35.721516<br><b>経度</b>: 139.739029<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 22<br><b>届先CD</b>: 0339431411<br><b>届先名</b>: 日新印刷　株式会社<br><b>住所</b>: 文京区大塚　５－２５－１７<br><b>枚数</b>: 001<br><b>重量</b>: 560<br><b>メモ</b>: 0339431411  　F有KPP先方　    3t規制あり。<br><b>緯度</b>: 35.723415<br><b>経度</b>: 139.729797<br><b>変換結果</b>: CACHE`);
 
-        marker.bindTooltip(`3号車`, {
+        marker.bindTooltip(`2号車`, {
             direction: "top",
             sticky: true,
             opacity: 0.95
         });
 
-        marker.truckNo = "3";
+        marker.truckNo = "2";
 
         allMarkers.push(marker);
 
@@ -369,13 +187,105 @@ L.tileLayer(
 
         var marker = L.circleMarker([35.70665, 139.725281], {
             radius: 8,
+            color: "blue",
+            fillColor: "blue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 26<br><b>届先CD</b>: 0332020550<br><b>届先名</b>: 有限会社　金子紙工断裁<br><b>住所</b>: 新宿区早稲田鶴巻町　５５３<br><b>枚数</b>: 001<br><b>重量</b>: 61<br><b>メモ</b>: 0332020550  フォーク有り  右積み 3トン車まで 一画の南側。<br><b>緯度</b>: 35.70665<br><b>経度</b>: 139.725281<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`2号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "2";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.708206, 139.740097], {
+            radius: 8,
+            color: "blue",
+            fillColor: "blue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 26<br><b>届先CD</b>: 0332602276<br><b>届先名</b>: 株式会社　加藤文明社　新宿工場<br><b>住所</b>: 新宿区東五軒町　６－２７<br><b>枚数</b>: 001<br><b>重量</b>: 1100<br><b>メモ</b>: 0332602276  　F有KPP先方　 ８：４５～ 左積み  ４t車OK　新目白通り沿いで降ろしてくれる。２t車は中に入れて降ろす。<br><b>緯度</b>: 35.708206<br><b>経度</b>: 139.740097<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`2号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "2";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.708652, 139.731812], {
+            radius: 8,
+            color: "blue",
+            fillColor: "blue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 26<br><b>届先CD</b>: 0332695975<br><b>届先名</b>: 森田表紙貼所<br><b>住所</b>: 文京区関口１－７－８<br><b>枚数</b>: 001<br><b>重量</b>: 75<br><b>メモ</b>: 0332695975      先方降し　歩行者多い　坂道　降ろしてもらった方が良い。<br><b>緯度</b>: 35.708652<br><b>経度</b>: 139.731812<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`2号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "2";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.709229, 139.72876], {
+            radius: 8,
+            color: "blue",
+            fillColor: "blue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 2<br><b>コースNo</b>: 26<br><b>届先CD</b>: 0352611786<br><b>届先名</b>: 有限会社　ワーク商業印刷<br><b>住所</b>: 新宿区山吹町　３５６<br><b>枚数</b>: 001<br><b>重量</b>: 201<br><b>メモ</b>: 0352611786  フォーク有り 8：30～   A全機を入れた為、A判全紙もいくそうです。<br><b>緯度</b>: 35.709229<br><b>経度</b>: 139.72876<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`2号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "2";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.649269, 139.700836], {
+            radius: 8,
             color: "green",
             fillColor: "green",
             fillOpacity: 0.85,
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 26<br><b>届先CD</b>: 0332020550<br><b>届先名</b>: 有限会社　金子紙工断裁<br><b>住所</b>: 新宿区早稲田鶴巻町　５５３<br><b>枚数</b>: 004<br><b>重量</b>: 271<br><b>メモ</b>: 0332020550  フォーク有り  右積み 3トン車まで 一画の南側。<br><b>緯度</b>: 35.70665<br><b>経度</b>: 139.725281<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 31<br><b>届先CD</b>: 0334621181<br><b>届先名</b>: 株式会社　真興社<br><b>住所</b>: 渋谷区猿楽町　１９－２<br><b>枚数</b>: 001<br><b>重量</b>: 1000<br><b>メモ</b>: 0334621181<br><b>緯度</b>: 35.649269<br><b>経度</b>: 139.700836<br><b>変換結果</b>: OK`);
 
         marker.bindTooltip(`3号車`, {
             direction: "top",
@@ -390,7 +300,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.803997, 139.673599], {
+        var marker = L.circleMarker([35.572346, 139.746933], {
             radius: 8,
             color: "green",
             fillColor: "green",
@@ -398,7 +308,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0482578013A<br><b>届先名</b>: プロネクサス　戸田工場Ａ搬入口　１Ｆ（印刷）<br><b>住所</b>: 埼玉県戸田市南町　６－７<br><b>枚数</b>: 001<br><b>重量</b>: 258<br><b>メモ</b>: 0482578013A 重点44 　F有KPP運×拒否　    午前納品は８時３０分から　下駄パレの上に降ろす。<br><b>緯度</b>: 35.803997<br><b>経度</b>: 139.673599<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 32<br><b>届先CD</b>: 0337638370<br><b>届先名</b>: 株式会社　文星閣／昭和島<br><b>住所</b>: 大田区昭和島　１－５－３２<br><b>枚数</b>: 001<br><b>重量</b>: 67<br><b>メモ</b>: 0337638370  　F有KPP先方　 １０：００～   1丁の場合は1階校正に聞いて確認をとる。月曜日(休み明けも)の納品はPM～<br><b>緯度</b>: 35.572346<br><b>経度</b>: 139.746933<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`3号車`, {
             direction: "top",
@@ -413,7 +323,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.827251, 139.64856], {
+        var marker = L.circleMarker([35.655491, 139.467178], {
             radius: 8,
             color: "green",
             fillColor: "green",
@@ -421,7 +331,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484218491<br><b>届先名</b>: 成和印刷<br><b>住所</b>: 埼玉県戸田市美女木東　２－４－７<br><b>枚数</b>: 002<br><b>重量</b>: 212<br><b>メモ</b>: 0484218491  　F有KPP先方　 8：00～ 右積み  ３Ｆに受付変更。順番の用紙をもらいフォークマンへ渡す。待機場所も変更となり指定場所にとめる。案内あり<br><b>緯度</b>: 35.827251<br><b>経度</b>: 139.64856<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 45<br><b>届先CD</b>: 0423527760<br><b>届先名</b>: 港北メディアサービス（株）　府中工場<br><b>住所</b>: 東京都府中市南町　５－３８－１２<br><b>枚数</b>: 002<br><b>重量</b>: 577<br><b>メモ</b>: 0423527760 重点67 　F有KPP先方　 8：30～   ８：３０～１７：００　　多摩川通り沿い。　入って左奥の断裁で受付。　右の事務所で荷降ろし頼む。<br><b>緯度</b>: 35.655491<br><b>経度</b>: 139.467178<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`3号車`, {
             direction: "top",
@@ -436,7 +346,30 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.806908, 139.646942], {
+        var marker = L.circleMarker([35.523735, 139.740631], {
+            radius: 8,
+            color: "green",
+            fillColor: "green",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 3<br><b>コースNo</b>: 46<br><b>届先CD</b>: 0442801211<br><b>届先名</b>: アート印刷　株式会社　川崎工場<br><b>住所</b>: 神奈川県川崎市川崎区塩浜　２－６－１１<br><b>枚数</b>: 003<br><b>重量</b>: 439<br><b>メモ</b>: 0442801211 重点68 　F有KPP運×拒否　    ８：３０～<br><b>緯度</b>: 35.523735<br><b>経度</b>: 139.740631<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`3号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "3";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.804245, 139.566452], {
             radius: 8,
             color: "orange",
             fillColor: "orange",
@@ -444,7 +377,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484211611E<br><b>届先名</b>: 中央精版印刷株式会社　４号館<br><b>住所</b>: 埼玉県戸田市笹目８－３－１１<br><b>枚数</b>: 002<br><b>重量</b>: 595<br><b>メモ</b>: 0484211611E 重点01 　F有KPP運●積極的　    フォーク有り、降ろしてくれる。受領印は自分で押す。11：30～13：00納品不可<br><b>緯度</b>: 35.806908<br><b>経度</b>: 139.646942<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 43<br><b>届先CD</b>: 0484247070<br><b>届先名</b>: スピックバンスター（株）　ＳＰ物流<br><b>住所</b>: 埼玉県新座市野火止７－１２－１９<br><b>枚数</b>: 001<br><b>重量</b>: 27<br><b>メモ</b>: 0484247070  　F有KPP先方　    先方で降ろしてくれる。自分で降ろさないように。倉庫群の一角<br><b>緯度</b>: 35.804245<br><b>経度</b>: 139.566452<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`4号車`, {
             direction: "top",
@@ -459,7 +392,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.802227, 139.653168], {
+        var marker = L.circleMarker([35.788258, 139.597305], {
             radius: 8,
             color: "orange",
             fillColor: "orange",
@@ -467,7 +400,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484212625<br><b>届先名</b>: 今家印刷　第２工場<br><b>住所</b>: 埼玉県戸田市早瀬　１－５－１<br><b>枚数</b>: 002<br><b>重量</b>: 3877<br><b>メモ</b>: 0484212625  　F有KPP先方　 8：00～ 左積み  従業員が来てれば8：00の実績あり。降ろしてくれる。<br><b>緯度</b>: 35.802227<br><b>経度</b>: 139.653168<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 43<br><b>届先CD</b>: 0484636325<br><b>届先名</b>: 株式会社　精興社　朝霞工場<br><b>住所</b>: 埼玉県朝霞市栄町　３－７－５５<br><b>枚数</b>: 002<br><b>重量</b>: 113<br><b>メモ</b>: 0484636325  　F有KPP先方　 8：30～   入口はいって左隅にあるパレットはもらえる。ワンプ破け修正厳禁（破けそのままOK）<br><b>緯度</b>: 35.788258<br><b>経度</b>: 139.597305<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`4号車`, {
             direction: "top",
@@ -482,7 +415,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.790382, 139.570053], {
+        var marker = L.circleMarker([35.789394, 139.552979], {
             radius: 8,
             color: "orange",
             fillColor: "orange",
@@ -490,7 +423,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 43<br><b>届先CD</b>: 0484795151<br><b>届先名</b>: 大観社製本株式会社<br><b>住所</b>: 埼玉県新座市畑中　１－２２－１７<br><b>枚数</b>: 001<br><b>重量</b>: 20<br><b>メモ</b>: 0484795151  フォーク有り    担当者（ハルさん）東側の倉庫　倉庫用の通路をさえぎって停めると出入禁止となる。<br><b>緯度</b>: 35.790382<br><b>経度</b>: 139.570053<br><b>変換結果</b>: OK`);
+        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 43<br><b>届先CD</b>: 0484773411<br><b>届先名</b>: 株式会社　光邦　新座工場<br><b>住所</b>: 埼玉県新座市野火止　３－１６－３<br><b>枚数</b>: 001<br><b>重量</b>: 1610<br><b>メモ</b>: 0484773411  　F有KPP先方　 ９：００～   荷降ろし：9：00　記帳8：00～OK 正面から入る　巻取り受付/建物の脇に階段有り。16：30迄<br><b>緯度</b>: 35.789394<br><b>経度</b>: 139.552979<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`4号車`, {
             direction: "top",
@@ -505,7 +438,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.805336, 139.567062], {
+        var marker = L.circleMarker([35.783073, 139.564743], {
             radius: 8,
             color: "orange",
             fillColor: "orange",
@@ -513,7 +446,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 43<br><b>届先CD</b>: 0484817500A<br><b>届先名</b>: 誠宏印刷　株式会社<br><b>住所</b>: 埼玉県新座市野火止　７－１４－８<br><b>枚数</b>: 005<br><b>重量</b>: 3608<br><b>メモ</b>: 0484817500A 重点57 　F有KPP運●消極的    2022/11/01より隣の元研究社印刷跡地に移転。11月いっぱいは元の工場跡地に降ろす。<br><b>緯度</b>: 35.805336<br><b>経度</b>: 139.567062<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 43<br><b>届先CD</b>: 0484783484<br><b>届先名</b>: 共和印刷株式会社<br><b>住所</b>: 埼玉県新座市馬場　４－１－２９<br><b>枚数</b>: 001<br><b>重量</b>: 106<br><b>メモ</b>: 0484783484  　F有KPP先方　 8：00～<br><b>緯度</b>: 35.783073<br><b>経度</b>: 139.564743<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`4号車`, {
             direction: "top",
@@ -528,7 +461,30 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.705532, 140.059875], {
+        var marker = L.circleMarker([35.787052, 139.549408], {
+            radius: 8,
+            color: "orange",
+            fillColor: "orange",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 4<br><b>コースNo</b>: 43<br><b>届先CD</b>: 0484800515<br><b>届先名</b>: 凸版物流　あたご事業所Ｃ棟<br><b>住所</b>: 埼玉県新座市あたご１－１－１４<br><b>枚数</b>: 002<br><b>重量</b>: 1155<br><b>メモ</b>: 0484800515  　F有KPP先方　    輪止めを必ずすること。(2019/10月)　8：45～　昼休み12：00～13：00　納品16時迄<br><b>緯度</b>: 35.787052<br><b>経度</b>: 139.549408<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`4号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "4";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([36.150967, 139.641296], {
             radius: 8,
             color: "purple",
             fillColor: "purple",
@@ -536,7 +492,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 5<br><b>コースNo</b>: 37<br><b>届先CD</b>: 0474741241<br><b>届先名</b>: 三晃印刷　株式会社　習志野工場<br><b>住所</b>: 千葉県船橋市習志野　４－１０－５<br><b>枚数</b>: 001<br><b>重量</b>: 4158<br><b>メモ</b>: 0474741241  　F有KPP先方　    大型だと入口の交差点が狭い。<br><b>緯度</b>: 35.705532<br><b>経度</b>: 140.059875<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 5<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0480684761<br><b>届先名</b>: 株式会社　リーブルテック<br><b>住所</b>: 埼玉県加須市古川　２－３－１<br><b>枚数</b>: 001<br><b>重量</b>: 805<br><b>メモ</b>: 0480684761  　F有KPP先方　    工場は北側にあるから北門から入ること。PM４時を過ぎる場合はＴＥＬすること　0480-98-2602<br><b>緯度</b>: 36.150967<br><b>経度</b>: 139.641296<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`5号車`, {
             direction: "top",
@@ -551,7 +507,30 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.804039, 139.645462], {
+        var marker = L.circleMarker([36.032669, 139.64888], {
+            radius: 8,
+            color: "purple",
+            fillColor: "purple",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 5<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0480935862C<br><b>届先名</b>: （株）ＤＮＰ出版プロダクツ　白岡工場<br><b>住所</b>: 埼玉県白岡市篠津　１１００－１<br><b>枚数</b>: 007<br><b>重量</b>: 4109<br><b>メモ</b>: 0480935862C  　F有KPP先方　    朝、荷卸しの為、並ぶ可能性あり！外装うるさい<br><b>緯度</b>: 36.032669<br><b>経度</b>: 139.64888<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`5号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "5";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.825333, 139.675705], {
             radius: 8,
             color: "darkred",
             fillColor: "darkred",
@@ -559,7 +538,76 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 6<br><b>届先CD</b>: 0484238650<br><b>届先名</b>: オリエンタルプレス　株式会社<br><b>住所</b>: 埼玉県戸田市笹目　８－１４－２<br><b>枚数</b>: 005<br><b>重量</b>: 626<br><b>メモ</b>: 0484238650 重点59 　F有KPP運×拒否　    ツメ長い<br><b>緯度</b>: 35.804039<br><b>経度</b>: 139.645462<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0332669072A<br><b>届先名</b>: 三共グラフィック　蕨工場<br><b>住所</b>: 埼玉県蕨市錦町２－３－１４<br><b>枚数</b>: 001<br><b>重量</b>: 67<br><b>メモ</b>: 0332669072A  　F有KPP運●消極的 8：30～   緑色の大きな建物　ヤードの上に自分で降ろす。<br><b>緯度</b>: 35.825333<br><b>経度</b>: 139.675705<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`6号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "6";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.82748, 139.654587], {
+            radius: 8,
+            color: "darkred",
+            fillColor: "darkred",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484211611<br><b>届先名</b>: 中央精版印刷株式会社／１号館（第１工場）<br><b>住所</b>: 埼玉県戸田市美女木東１－６－３<br><b>枚数</b>: 001<br><b>重量</b>: 1286<br><b>メモ</b>: 0484211611 重点01 　F有KPP運●消極的 ９：３０～   PMは13時30分～　受領印は自分で押す。＊校正紙は受領印近くの棚に置く。9：30～11：15まで<br><b>緯度</b>: 35.82748<br><b>経度</b>: 139.654587<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`6号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "6";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.803646, 139.652939], {
+            radius: 8,
+            color: "darkred",
+            fillColor: "darkred",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484211611D<br><b>届先名</b>: 中央精版印刷株式会社／新２号館<br><b>住所</b>: 埼玉県戸田市早瀬　１－７－１<br><b>枚数</b>: 001<br><b>重量</b>: 1197<br><b>メモ</b>: 0484211611D 重点01 　F有KPP先方　    何本ある場合は、転がしが良い。後に２本立てるのは禁止。立てる場合は転がし方向は右で<br><b>緯度</b>: 35.803646<br><b>経度</b>: 139.652939<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`6号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "6";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.802975, 139.646469], {
+            radius: 8,
+            color: "darkred",
+            fillColor: "darkred",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484218571<br><b>届先名</b>: 株式会社　木元省美堂　戸田工場<br><b>住所</b>: 埼玉県戸田市笹目　８－１５－２７<br><b>枚数</b>: 001<br><b>重量</b>: 44<br><b>緯度</b>: 35.802975<br><b>経度</b>: 139.646469<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`6号車`, {
             direction: "top",
@@ -582,7 +630,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484498777<br><b>届先名</b>: ウエマツ　戸田工場<br><b>住所</b>: 埼玉県戸田市笹目８－１２－２<br><b>枚数</b>: 007<br><b>重量</b>: 1194<br><b>メモ</b>: 0484498777 重点03 　F有KPP運●消極的 8：00～   ★納品前にＴＥＬ　8：00前、12：00～13：00、夕方は荷降ろしがスムーズです。<br><b>緯度</b>: 35.805161<br><b>経度</b>: 139.646927<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484221237<br><b>届先名</b>: ダイトー紙工業<br><b>住所</b>: 埼玉県戸田市笹目８－１２－２１<br><b>枚数</b>: 001<br><b>重量</b>: 275<br><b>メモ</b>: 0484221237      外観チェックされるので注意！朝一は積込があるので避けたほうが良い。<br><b>緯度</b>: 35.805161<br><b>経度</b>: 139.646927<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`6号車`, {
             direction: "top",
@@ -597,7 +645,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([36.032669, 139.64888], {
+        var marker = L.circleMarker([35.80909, 139.651077], {
             radius: 8,
             color: "darkred",
             fillColor: "darkred",
@@ -605,7 +653,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0480935862C<br><b>届先名</b>: （株）ＤＮＰ出版プロダクツ　白岡工場<br><b>住所</b>: 埼玉県白岡市篠津　１１００－１<br><b>枚数</b>: 012<br><b>重量</b>: 4562<br><b>メモ</b>: 0480935862C  　F有KPP先方　    朝、荷卸しの為、並ぶ可能性あり！外装うるさい<br><b>緯度</b>: 36.032669<br><b>経度</b>: 139.64888<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484222236<br><b>届先名</b>: 株式会社　埼京印刷<br><b>住所</b>: 埼玉県戸田市笹目南町　２７－２５<br><b>枚数</b>: 002<br><b>重量</b>: 337<br><b>メモ</b>: 0484222236  　F有KPP先方　 8：00～   倉庫移転。（21年8月）同じ並びの２軒隣り（笹目南町27-1）車両は敷地内に入れる事<br><b>緯度</b>: 35.80909<br><b>経度</b>: 139.651077<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`6号車`, {
             direction: "top",
@@ -628,7 +676,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 99<br><b>届先CD</b>: 0484221237<br><b>届先名</b>: ダイトー紙工業<br><b>住所</b>: 埼玉県戸田市笹目８－１２－２１<br><b>枚数</b>: 001<br><b>重量</b>: 82<br><b>メモ</b>: 0484221237      外観チェックされるので注意！朝一は積込があるので避けたほうが良い。<br><b>緯度</b>: 35.805161<br><b>経度</b>: 139.646927<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 6<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484498777<br><b>届先名</b>: ウエマツ　戸田工場<br><b>住所</b>: 埼玉県戸田市笹目８－１２－２<br><b>枚数</b>: 007<br><b>重量</b>: 1045<br><b>メモ</b>: 0484498777 重点03 　F有KPP運●消極的 8：00～   ★納品前にＴＥＬ　8：00前、12：00～13：00、夕方は荷降ろしがスムーズです。<br><b>緯度</b>: 35.805161<br><b>経度</b>: 139.646927<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`6号車`, {
             direction: "top",
@@ -643,7 +691,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([36.094585, 139.732178], {
+        var marker = L.circleMarker([35.829693, 139.537781], {
             radius: 8,
             color: "cadetblue",
             fillColor: "cadetblue",
@@ -651,7 +699,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 7<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0280843511<br><b>届先名</b>: 共同印刷（株）　五霞工場１号館<br><b>住所</b>: 茨城県猿島郡五霞町元栗橋７５１４<br><b>枚数</b>: 001<br><b>重量</b>: 1089<br><b>メモ</b>: 0280843511      １号館は活輪工場側。基本4/6判は１号館納品<br><b>緯度</b>: 36.094585<br><b>経度</b>: 139.732178<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 7<br><b>コースNo</b>: 44<br><b>届先CD</b>: 0492589111A<br><b>届先名</b>: 暁印刷株式会社　埼玉工場<br><b>住所</b>: 埼玉県入間郡三芳町藤久保５５０－１<br><b>枚数</b>: 002<br><b>重量</b>: 1366<br><b>メモ</b>: 0492589111A 重点62 　F有KPP運●積極的　    事務所１Fで受付。荷物は奥の荷捌き場へ。商品の混載不可。巻き取りは転がし（王子は矢印後ろ）<br><b>緯度</b>: 35.829693<br><b>経度</b>: 139.537781<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`7号車`, {
             direction: "top",
@@ -660,6 +708,604 @@ L.tileLayer(
         });
 
         marker.truckNo = "7";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.822544, 139.522827], {
+            radius: 8,
+            color: "cadetblue",
+            fillColor: "cadetblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 7<br><b>コースNo</b>: 44<br><b>届先CD</b>: 0492590492<br><b>届先名</b>: 株式会社　文化カラー印刷　三芳工場<br><b>住所</b>: 埼玉県入間郡三芳町北永井　４３９－３<br><b>枚数</b>: 004<br><b>重量</b>: 303<br><b>メモ</b>: 0492590492  　F有KPP先方　 8：30～   右側の建物1F断截場所が受付。パレット積み重ねの際は合紙を入れる。<br><b>緯度</b>: 35.822544<br><b>経度</b>: 139.522827<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`7号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "7";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.793198, 139.683685], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0335580900<br><b>届先名</b>: 有限会社　盛伸社<br><b>住所</b>: 板橋区舟渡　３－８－９<br><b>枚数</b>: 004<br><b>重量</b>: 126<br><b>メモ</b>: 0335580900  　F有KPP先方　 8：00～   ８時から営業朝礼あり長い時もある。　先方荷降ろし。<br><b>緯度</b>: 35.793198<br><b>経度</b>: 139.683685<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.794163, 139.68837], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0339602511<br><b>届先名</b>: 平河工業社　舟渡工場<br><b>住所</b>: 板橋区舟渡　２－６－３０<br><b>枚数</b>: 001<br><b>重量</b>: 244<br><b>メモ</b>: 0339602511  　F有KPP先方　 8：00～   受領印は自分で押して自分で降ろす。　検品不要　ウイングの場合はひさしの無い入口入った場所で荷降ろし。<br><b>緯度</b>: 35.794163<br><b>経度</b>: 139.68837<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.786625, 139.696732], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0339662231<br><b>届先名</b>: 信越定期自動車株式会社　浮間<br><b>住所</b>: 北区浮間　５－１－１０<br><b>枚数</b>: 002<br><b>重量</b>: 1448<br><b>メモ</b>: 0339662231  　F有KPP先方　 8：30～   プラットフォーム上の事務所で受付け。<br><b>緯度</b>: 35.786625<br><b>経度</b>: 139.696732<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.792831, 139.684326], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0339668273<br><b>届先名</b>: 株式会社　ポスター印刷（舟渡）<br><b>住所</b>: 板橋区舟渡　３－８－３<br><b>枚数</b>: 001<br><b>重量</b>: 93<br><b>メモ</b>: 0339668273 重点08 　F有KPP先方　    道路が狭いので注意！<br><b>緯度</b>: 35.792831<br><b>経度</b>: 139.684326<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.773849, 139.696548], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0339685381<br><b>届先名</b>: ＴＯＰＰＡＮ（株）板橋工場ＴＡＣＴ<br><b>住所</b>: 板橋区志村　１－１１－１<br><b>枚数</b>: 001<br><b>重量</b>: 12<br><b>メモ</b>: 0339685381  　F有KPP先方　    事務所は無くなりました。　昼は11：30～12：30<br><b>緯度</b>: 35.773849<br><b>経度</b>: 139.696548<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.795845, 139.690491], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0339692936<br><b>届先名</b>: 有限会社　桜松<br><b>住所</b>: 板橋区舟渡　２－１８－９<br><b>枚数</b>: 002<br><b>重量</b>: 356<br><b>メモ</b>: 0339692936 重点73 　F有KPP運●消極的    ４ｔOK　狭いので注意。<br><b>緯度</b>: 35.795845<br><b>経度</b>: 139.690491<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.794235, 139.684845], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0359161591<br><b>届先名</b>: 東京リスマチック　舟渡工場<br><b>住所</b>: 板橋区舟渡３－１４－２１<br><b>枚数</b>: 001<br><b>重量</b>: 76<br><b>メモ</b>: 0359161591  　F有KPP先方　 8：00～   入口のスロープが2段になっている。最徐行で入場、荷崩れ注意！<br><b>緯度</b>: 35.794235<br><b>経度</b>: 139.684845<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.793163, 139.683578], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 15<br><b>届先CD</b>: 0367581033<br><b>届先名</b>: 日経印刷株式会社　Ｇ２　印刷<br><b>住所</b>: 板橋区舟渡　３－７－１６<br><b>枚数</b>: 001<br><b>重量</b>: 370<br><b>メモ</b>: 0367581033  　F有KPP先方　    降ろしてくれる。刷本積み込み優先終わり次第早い時間でも降ろしてくれる。<br><b>緯度</b>: 35.793163<br><b>経度</b>: 139.683578<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.760616, 139.645798], {
+            radius: 8,
+            color: "darkblue",
+            fillColor: "darkblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 16<br><b>届先CD</b>: 0339300153<br><b>届先名</b>: 島田商会<br><b>住所</b>: 練馬区田柄　１－８－２８<br><b>枚数</b>: 002<br><b>重量</b>: 280<br><b>メモ</b>: 0339300153  フォーク有り    16：00迄<br><b>緯度</b>: 35.760616<br><b>経度</b>: 139.645798<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`9号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "9";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.689247, 139.792557], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 2<br><b>届先CD</b>: 0336320171<br><b>届先名</b>: 株式会社　明祥<br><b>住所</b>: 江東区新大橋　１－８－７<br><b>枚数</b>: 001<br><b>重量</b>: 216<br><b>メモ</b>: 0336320171  フォーク有り 8：30～   フォークのカギを受け取り自分で降ろす。<br><b>緯度</b>: 35.689247<br><b>経度</b>: 139.792557<br><b>変換結果</b>: OK`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.66935, 139.838028], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 3<br><b>届先CD</b>: 0356833301<br><b>届先名</b>: 株式会社　ケープリント<br><b>住所</b>: 江東区東砂　８－５－１<br><b>枚数</b>: 002<br><b>重量</b>: 46<br><b>メモ</b>: 0356833301  フォーク有り    左積み<br><b>緯度</b>: 35.66935<br><b>経度</b>: 139.838028<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.66935, 139.838028], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 3<br><b>届先CD</b>: 0356833320G<br><b>届先名</b>: 株式会社　ケープリント　２Ｆ<br><b>住所</b>: 江東区東砂　８－５－１<br><b>枚数</b>: 002<br><b>重量</b>: 1088<br><b>メモ</b>: 0356833320G  　F有KPP先方　    左積み<br><b>緯度</b>: 35.66935<br><b>経度</b>: 139.838028<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.704681, 139.721512], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 26<br><b>届先CD</b>: 0338419632*<br><b>届先名</b>: 大同紙販売株式会社<br><b>住所</b>: 新宿区喜久井町１２－１<br><b>枚数</b>: 012<br><b>重量</b>: 3539<br><b>メモ</b>: 0338419632*      4ｔ車は横着け。<br><b>緯度</b>: 35.704681<br><b>経度</b>: 139.721512<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.793667, 139.747314], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482219525<br><b>届先名</b>: 株式会社コラボ<br><b>住所</b>: 埼玉県川口市領家３－７－８<br><b>枚数</b>: 005<br><b>重量</b>: 1412<br><b>メモ</b>: 0482219525  　F有KPP先方　    先方荷下ろしになった<br><b>緯度</b>: 35.793667<br><b>経度</b>: 139.747314<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.798874, 139.755157], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482255257A<br><b>届先名</b>: ＴＯＰＰＡＮ（株）川口工場７棟白紙断裁<br><b>住所</b>: 埼玉県川口市弥平４－３－１<br><b>枚数</b>: 001<br><b>重量</b>: 67<br><b>メモ</b>: 0482255257Ａ  　F有KPP先方　    入口入って左に停車し、守衛で受付、番号札もらい、直接７棟の現場へ行く。<br><b>緯度</b>: 35.798874<br><b>経度</b>: 139.755157<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.798874, 139.755157], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482255425<br><b>届先名</b>: ＴＯＰＰＡＮ（株）　川口平版印刷<br><b>住所</b>: 埼玉県川口市弥平　４－３－１<br><b>枚数</b>: 005<br><b>重量</b>: 800<br><b>メモ</b>: 0482255425  　F有KPP先方　    １時間待ちは普通、混んでたら1：30分ぐらい待つ　巻取の場合リンク情報有り。<br><b>緯度</b>: 35.798874<br><b>経度</b>: 139.755157<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.812473, 139.754898], {
+            radius: 8,
+            color: "gray",
+            fillColor: "gray",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 12<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482876588<br><b>届先名</b>: 株式会社スリーエムプリンティング／川口工場<br><b>住所</b>: 埼玉県川口市八幡木　３－２９－１<br><b>枚数</b>: 003<br><b>重量</b>: 1062<br><b>メモ</b>: 0482876588<br><b>緯度</b>: 35.812473<br><b>経度</b>: 139.754898<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`12号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "12";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.852322, 139.503891], {
+            radius: 8,
+            color: "black",
+            fillColor: "black",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 13<br><b>コースNo</b>: 44<br><b>届先CD</b>: 0492624911<br><b>届先名</b>: 株式会社ＫＰＳプロダクツ　印刷製造部<br><b>住所</b>: 埼玉県ふじみ野市亀久保１１４１－１<br><b>枚数</b>: 002<br><b>重量</b>: 1730<br><b>メモ</b>: 0492624911  　F有KPP先方　 ９：００～   白と灰色のきれいな建物　通りからは、看板無いので注意　入って右側<br><b>緯度</b>: 35.852322<br><b>経度</b>: 139.503891<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`13号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "13";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.852322, 139.503891], {
+            radius: 8,
+            color: "black",
+            fillColor: "black",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 13<br><b>コースNo</b>: 44<br><b>届先CD</b>: 0492653336<br><b>届先名</b>: （株）新藤慶昌堂　ふじみ野工場<br><b>住所</b>: 埼玉県ふじみ野市亀久保　１１４１－１<br><b>枚数</b>: 005<br><b>重量</b>: 2939<br><b>メモ</b>: 0492653336  　F有KPP先方　    入口を入って左側の棟。奥の入口。049-265-3336　にＴＥＬすれば出て来てくれる。8:30～<br><b>緯度</b>: 35.852322<br><b>経度</b>: 139.503891<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`13号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "13";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.856567, 139.504532], {
+            radius: 8,
+            color: "black",
+            fillColor: "black",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 13<br><b>コースNo</b>: 44<br><b>届先CD</b>: 0492931134<br><b>届先名</b>: 小宮山印刷（株）ふじみ野工場<br><b>住所</b>: 埼玉県ふじみ野市大井中央１－１９－６１<br><b>枚数</b>: 006<br><b>重量</b>: 2353<br><b>メモ</b>: 0492931134  　F有KPP先方　 ９：００～   新工場　202205～　向って右の入口付近のインターホンを押す。　ケーズデンキの正面<br><b>緯度</b>: 35.856567<br><b>経度</b>: 139.504532<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`13号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "13";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.870941, 139.390457], {
+            radius: 8,
+            color: "black",
+            fillColor: "black",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 13<br><b>コースNo</b>: 58<br><b>届先CD</b>: 0429549121<br><b>届先名</b>: 大日本印刷（株）　狭山第二工場<br><b>住所</b>: 埼玉県狭山市広瀬台２－５－１<br><b>枚数</b>: 001<br><b>重量</b>: 75<br><b>メモ</b>: 0429549121  　F有KPP先方　 8：30～   大型OK。ＩＣ納品分は入門ゲート入りすぐ右の場所で降ろす。PM13：30～<br><b>緯度</b>: 35.870941<br><b>経度</b>: 139.390457<br><b>変換結果</b>: OK`);
+
+        marker.bindTooltip(`13号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "13";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.658699, 139.815689], {
+            radius: 8,
+            color: "lightblue",
+            fillColor: "lightblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 14<br><b>コースNo</b>: 4<br><b>届先CD</b>: 0336852268<br><b>届先名</b>: 菊地秀美堂<br><b>住所</b>: 江東区潮見　２－５－２<br><b>枚数</b>: 001<br><b>重量</b>: 2803<br><b>メモ</b>: 0336852268  　F有KPP先方　    自分で降ろす<br><b>緯度</b>: 35.658699<br><b>経度</b>: 139.815689<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`14号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "14";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([35.674744, 139.789047], {
+            radius: 8,
+            color: "lightblue",
+            fillColor: "lightblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 14<br><b>コースNo</b>: 4<br><b>届先CD</b>: 0338204004<br><b>届先名</b>: 株式会社ムトウユニパック　物流センター<br><b>住所</b>: 江東区永代１－５－７<br><b>枚数</b>: 001<br><b>重量</b>: 1012<br><b>メモ</b>: 0338204004<br><b>緯度</b>: 35.674744<br><b>経度</b>: 139.789047<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`14号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "14";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([36.073658, 139.627106], {
+            radius: 8,
+            color: "lightblue",
+            fillColor: "lightblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 14<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0480225510<br><b>届先名</b>: 大日本印刷株式会社　久喜工場<br><b>住所</b>: 埼玉県久喜市清久町　１－５<br><b>枚数</b>: 001<br><b>重量</b>: 135<br><b>メモ</b>: 0480225510  　F有KPP運●消極的    巻取りは転がし！パレットNG　　待たされる可能性あり。　12：30～13：30　昼休み<br><b>緯度</b>: 36.073658<br><b>経度</b>: 139.627106<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`14号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "14";
+
+        allMarkers.push(marker);
+
+        marker.addTo(map);
+        
+
+        var marker = L.circleMarker([36.150967, 139.641296], {
+            radius: 8,
+            color: "lightblue",
+            fillColor: "lightblue",
+            fillOpacity: 0.85,
+            weight: 2
+        });
+
+        marker.bindPopup(`<b>号車</b>: 14<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0480684761<br><b>届先名</b>: 株式会社　リーブルテック<br><b>住所</b>: 埼玉県加須市古川　２－３－１<br><b>枚数</b>: 001<br><b>重量</b>: 62<br><b>メモ</b>: 0480684761  　F有KPP先方　    工場は北側にあるから北門から入ること。PM４時を過ぎる場合はＴＥＬすること　0480-98-2602<br><b>緯度</b>: 36.150967<br><b>経度</b>: 139.641296<br><b>変換結果</b>: CACHE`);
+
+        marker.bindTooltip(`14号車`, {
+            direction: "top",
+            sticky: true,
+            opacity: 0.95
+        });
+
+        marker.truckNo = "14";
 
         allMarkers.push(marker);
 
@@ -668,120 +1314,28 @@ L.tileLayer(
 
         var marker = L.circleMarker([36.032669, 139.64888], {
             radius: 8,
-            color: "cadetblue",
-            fillColor: "cadetblue",
+            color: "lightblue",
+            fillColor: "lightblue",
             fillOpacity: 0.85,
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 7<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0480935862C<br><b>届先名</b>: （株）ＤＮＰ出版プロダクツ　白岡工場<br><b>住所</b>: 埼玉県白岡市篠津　１１００－１<br><b>枚数</b>: 003<br><b>重量</b>: 1832<br><b>メモ</b>: 0480935862C  　F有KPP先方　    朝、荷卸しの為、並ぶ可能性あり！外装うるさい<br><b>緯度</b>: 36.032669<br><b>経度</b>: 139.64888<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 14<br><b>コースNo</b>: 57<br><b>届先CD</b>: 0480935862C<br><b>届先名</b>: （株）ＤＮＰ出版プロダクツ　白岡工場<br><b>住所</b>: 埼玉県白岡市篠津　１１００－１<br><b>枚数</b>: 003<br><b>重量</b>: 947<br><b>メモ</b>: 0480935862C  　F有KPP先方　    朝、荷卸しの為、並ぶ可能性あり！外装うるさい<br><b>緯度</b>: 36.032669<br><b>経度</b>: 139.64888<br><b>変換結果</b>: CACHE`);
 
-        marker.bindTooltip(`7号車`, {
+        marker.bindTooltip(`14号車`, {
             direction: "top",
             sticky: true,
             opacity: 0.95
         });
 
-        marker.truckNo = "7";
+        marker.truckNo = "14";
 
         allMarkers.push(marker);
 
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.706223, 139.728897], {
-            radius: 8,
-            color: "darkblue",
-            fillColor: "darkblue",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 26<br><b>届先CD</b>: 0352616656*<br><b>届先名</b>: （株）ＤＮＰグラフィカ榎町製造部　平印<br><b>住所</b>: 新宿区榎町７<br><b>枚数</b>: 003<br><b>重量</b>: 7373<br><b>メモ</b>: 0352616656*<br><b>緯度</b>: 35.706223<br><b>経度</b>: 139.728897<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`9号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "9";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.805111, 139.69165], {
-            radius: 8,
-            color: "darkblue",
-            fillColor: "darkblue",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 9<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484411298<br><b>届先名</b>: 松崎紙工<br><b>住所</b>: 埼玉県戸田市喜沢南　２－３－８<br><b>枚数</b>: 002<br><b>重量</b>: 5004<br><b>メモ</b>: 0484411298  　F有KPP先方　 8：30～   検品終了まで工場の外で待つ。小学生登下校時間帯の入退場要注意！！<br><b>緯度</b>: 35.805111<br><b>経度</b>: 139.69165<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`9号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "9";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.824726, 139.657501], {
-            radius: 8,
-            color: "pink",
-            fillColor: "pink",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 11<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484233200<br><b>届先名</b>: 千修岩井印刷（株）<br><b>住所</b>: 埼玉県戸田市笹目北町１－１<br><b>枚数</b>: 001<br><b>重量</b>: 110<br><b>メモ</b>: 0484233200  　F有KPP運×拒否　    一番奥のドアから入り内線で呼びだす。荷降ろしは一番入口寄りのシャッター。多い時は混載不可。8：45～<br><b>緯度</b>: 35.824726<br><b>経度</b>: 139.657501<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`11号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "11";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.825317, 139.650772], {
-            radius: 8,
-            color: "pink",
-            fillColor: "pink",
-            fillOpacity: 0.85,
-            weight: 2
-        });
-
-        marker.bindPopup(`<b>号車</b>: 11<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484496211<br><b>届先名</b>: 株式会社　ＮＰＣ<br><b>住所</b>: 埼玉県戸田市美女木東　１－４－１<br><b>枚数</b>: 002<br><b>重量</b>: 273<br><b>メモ</b>: 0484496211  フォーク有り ９：００～ 右積み  事務所に行く際もﾍﾙﾒｯﾄ着用。待つことが多い！伝票単位にパレット分け必要<br><b>緯度</b>: 35.825317<br><b>経度</b>: 139.650772<br><b>変換結果</b>: CACHE`);
-
-        marker.bindTooltip(`11号車`, {
-            direction: "top",
-            sticky: true,
-            opacity: 0.95
-        });
-
-        marker.truckNo = "11";
-
-        allMarkers.push(marker);
-
-        marker.addTo(map);
-        
-
-        var marker = L.circleMarker([35.82476, 139.670868], {
+        var marker = L.circleMarker([35.801781, 139.696274], {
             radius: 8,
             color: "darkred",
             fillColor: "darkred",
@@ -789,7 +1343,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484441186<br><b>届先名</b>: 大日本印刷株式会社　蕨工場<br><b>住所</b>: 埼玉県蕨市錦町　４－５－１<br><b>枚数</b>: 002<br><b>重量</b>: 1324<br><b>メモ</b>: 0484441186  　F有KPP先方　 8：00～   11：30～12：30（昼休み）　右折入場禁止。平版は巻取搬入口の裏側「金券管理課」が窓口。<br><b>緯度</b>: 35.82476<br><b>経度</b>: 139.670868<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482715721<br><b>届先名</b>: 株式会社エーヴィスシステムズ　川口工場<br><b>住所</b>: 埼玉県川口市緑町８－２４<br><b>枚数</b>: 002<br><b>重量</b>: 573<br><b>メモ</b>: 0482715721 重点39 　F有KPP運×拒否　    TK商事（旧オプティ）の手前の毎日新聞ビル　右端のシャッターの入口から入る。　朝霞から引越し<br><b>緯度</b>: 35.801781<br><b>経度</b>: 139.696274<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`36号車`, {
             direction: "top",
@@ -804,7 +1358,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.830742, 139.653259], {
+        var marker = L.circleMarker([35.837944, 139.730804], {
             radius: 8,
             color: "darkred",
             fillColor: "darkred",
@@ -812,7 +1366,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0484496301<br><b>届先名</b>: 萩原印刷　戸田工場<br><b>住所</b>: 埼玉県戸田市美女木北２－１１－４<br><b>枚数</b>: 002<br><b>重量</b>: 140<br><b>メモ</b>: 0484496301  　F有KPP運×拒否　 8：00～   mapsと違う<br><b>緯度</b>: 35.830742<br><b>経度</b>: 139.653259<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482831239<br><b>届先名</b>: 有限会社　早船印刷<br><b>住所</b>: 埼玉県川口市里　５９２<br><b>枚数</b>: 001<br><b>重量</b>: 405<br><b>メモ</b>: 0482831239   8：00～   大通り沿い、住所594。スリッパに履き替え、所定の場所に手降ろし。4ｔ車ＯＫ<br><b>緯度</b>: 35.837944<br><b>経度</b>: 139.730804<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`36号車`, {
             direction: "top",
@@ -827,7 +1381,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.856998, 139.623199], {
+        var marker = L.circleMarker([35.809528, 139.754166], {
             radius: 8,
             color: "darkred",
             fillColor: "darkred",
@@ -835,7 +1389,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0488615108<br><b>届先名</b>: 株式会社　廣済堂ネクスト　さいたま第１<br><b>住所</b>: 埼玉県さいたま市桜区町谷　１－４－１<br><b>枚数</b>: 002<br><b>重量</b>: 755<br><b>メモ</b>: 0488615108  　F有KPP先方　  左積み  フォークあり。070-6486-7664にTELし、社屋駐車場か荷下ろし場どちらで降ろすか聞く。ラフ<br><b>緯度</b>: 35.856998<br><b>経度</b>: 139.623199<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482866333<br><b>届先名</b>: イナザキ印刷<br><b>住所</b>: 足立区入谷　９－１８－７<br><b>枚数</b>: 007<br><b>重量</b>: 712<br><b>メモ</b>: 0482866333 重点66 　F有KPP運×拒否　 8：30～   受領印は自分で押す。　荷物はプラットホームに乗せる。　四六版は断裁の為、棒積みOK、昼休み11:30<br><b>緯度</b>: 35.809528<br><b>経度</b>: 139.754166<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`36号車`, {
             direction: "top",
@@ -850,7 +1404,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.834969, 139.643875], {
+        var marker = L.circleMarker([35.823025, 139.759003], {
             radius: 8,
             color: "darkred",
             fillColor: "darkred",
@@ -858,7 +1412,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 42<br><b>届先CD</b>: 0488643646<br><b>届先名</b>: 有限会社マルヨシプリント<br><b>住所</b>: 埼玉県さいたま市南区内谷　４－１２－２<br><b>枚数</b>: 001<br><b>重量</b>: 561<br><b>メモ</b>: 0488643646  　F有KPP運×拒否　 8：00～   バッテリーフォークのほうはサイドブレーキが甘い為、ガソリンフォークを使った方が安全です。<br><b>緯度</b>: 35.834969<br><b>経度</b>: 139.643875<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 36<br><b>コースNo</b>: 40<br><b>届先CD</b>: 0482881020B<br><b>届先名</b>: 株式会社　アイエスアイ<br><b>住所</b>: 埼玉県川口市東本郷１－９－２５<br><b>枚数</b>: 001<br><b>重量</b>: 108<br><b>メモ</b>: 0482881020B  　F有KPP先方　 ９：００～   　早い時間は積込みで混雑する場合有り。前の道路は駐車禁止　豊通分は受入れに事前電話連絡すること。<br><b>緯度</b>: 35.823025<br><b>経度</b>: 139.759003<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`36号車`, {
             direction: "top",
@@ -873,7 +1427,7 @@ L.tileLayer(
         marker.addTo(map);
         
 
-        var marker = L.circleMarker([35.635712, 139.834564], {
+        var marker = L.circleMarker([35.705532, 140.059875], {
             radius: 8,
             color: "lightgreen",
             fillColor: "lightgreen",
@@ -881,7 +1435,7 @@ L.tileLayer(
             weight: 2
         });
 
-        marker.bindPopup(`<b>号車</b>: 90<br><b>コースNo</b>: 99<br><b>届先CD</b>: 0335227411<br><b>届先名</b>: 丸武運輸株式会社　新木場ロジスティクス<br><b>住所</b>: 江東区新木場　３－５－６<br><b>枚数</b>: 001<br><b>重量</b>: 19<br><b>メモ</b>: 0335227411<br><b>緯度</b>: 35.635712<br><b>経度</b>: 139.834564<br><b>変換結果</b>: CACHE`);
+        marker.bindPopup(`<b>号車</b>: 90<br><b>コースNo</b>: 37<br><b>届先CD</b>: 0474741241<br><b>届先名</b>: 三晃印刷　株式会社　習志野工場<br><b>住所</b>: 千葉県船橋市習志野　４－１０－５<br><b>枚数</b>: 001<br><b>重量</b>: 82<br><b>メモ</b>: 0474741241  　F有KPP先方　    大型だと入口の交差点が狭い。<br><b>緯度</b>: 35.705532<br><b>経度</b>: 140.059875<br><b>変換結果</b>: CACHE`);
 
         marker.bindTooltip(`90号車`, {
             direction: "top",
@@ -991,40 +1545,64 @@ document.addEventListener(
 );
 
 var bounds = L.latLngBounds([
-[35.711391, 139.833588],
-[35.699501, 139.802628],
-[35.78455, 139.748474],
-[35.796009, 139.756882],
-[35.84227, 139.725037],
-[35.760303, 139.731888],
-[35.744926, 139.709244],
-[35.773849, 139.696548],
-[35.794235, 139.684845],
+[35.740726, 139.67984],
 [35.718422, 139.743347],
-[35.721516, 139.739029],
+[35.723415, 139.729797],
 [35.70665, 139.725281],
-[35.803997, 139.673599],
-[35.827251, 139.64856],
-[35.806908, 139.646942],
-[35.802227, 139.653168],
-[35.790382, 139.570053],
-[35.805336, 139.567062],
-[35.705532, 140.059875],
-[35.804039, 139.645462],
-[35.805161, 139.646927],
+[35.708206, 139.740097],
+[35.708652, 139.731812],
+[35.709229, 139.72876],
+[35.649269, 139.700836],
+[35.572346, 139.746933],
+[35.655491, 139.467178],
+[35.523735, 139.740631],
+[35.804245, 139.566452],
+[35.788258, 139.597305],
+[35.789394, 139.552979],
+[35.783073, 139.564743],
+[35.787052, 139.549408],
+[36.150967, 139.641296],
 [36.032669, 139.64888],
+[35.825333, 139.675705],
+[35.82748, 139.654587],
+[35.803646, 139.652939],
+[35.802975, 139.646469],
 [35.805161, 139.646927],
-[36.094585, 139.732178],
+[35.80909, 139.651077],
+[35.805161, 139.646927],
+[35.829693, 139.537781],
+[35.822544, 139.522827],
+[35.793198, 139.683685],
+[35.794163, 139.68837],
+[35.786625, 139.696732],
+[35.792831, 139.684326],
+[35.773849, 139.696548],
+[35.795845, 139.690491],
+[35.794235, 139.684845],
+[35.793163, 139.683578],
+[35.760616, 139.645798],
+[35.689247, 139.792557],
+[35.66935, 139.838028],
+[35.66935, 139.838028],
+[35.704681, 139.721512],
+[35.793667, 139.747314],
+[35.798874, 139.755157],
+[35.798874, 139.755157],
+[35.812473, 139.754898],
+[35.852322, 139.503891],
+[35.852322, 139.503891],
+[35.856567, 139.504532],
+[35.870941, 139.390457],
+[35.658699, 139.815689],
+[35.674744, 139.789047],
+[36.073658, 139.627106],
+[36.150967, 139.641296],
 [36.032669, 139.64888],
-[35.706223, 139.728897],
-[35.805111, 139.69165],
-[35.824726, 139.657501],
-[35.825317, 139.650772],
-[35.82476, 139.670868],
-[35.830742, 139.653259],
-[35.856998, 139.623199],
-[35.834969, 139.643875],
-[35.635712, 139.834564]
+[35.801781, 139.696274],
+[35.837944, 139.730804],
+[35.809528, 139.754166],
+[35.823025, 139.759003],
+[35.705532, 140.059875]
 ]);
 
 map.fitBounds(bounds, {
